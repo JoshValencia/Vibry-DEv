@@ -17,10 +17,10 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "LIMITED 30% OFF EARLY BIRD DISCOUNT",
             "text_alignment": "center",
-            "color_scheme": "background-1",
-            "link": ""
+            "color_scheme": "accent-1",
+            "link": "#"
           }
         }
       },
