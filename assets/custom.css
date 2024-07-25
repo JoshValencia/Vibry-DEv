@@ -1,0 +1,39 @@
+/* Global Styles (start)*/
+/* :root{
+
+} */
+
+.button--highlight {
+  font-weight: 700;
+}
+
+.button--tight {
+  padding: 0 1rem !important;
+  min-width: 0 !important;
+}
+/* Global Styles (end) */
+
+/* Overrides ( start ) */
+.section-custom-header .header {
+  grid-template-areas: "heading button";
+}
+
+.section-custom-header .header--mobile-left {
+  grid-template-columns: 2fr 1fr;
+}
+
+.custom-header-cta-container {
+  grid-area: button;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+/* Overrides ( end ) */
