@@ -138,6 +138,7 @@
         "image_Tb7ycQ": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Graphic.png"
           }
         }
       },
