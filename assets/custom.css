@@ -8,6 +8,7 @@
     #0834ca 302.75%
   );
   --animation-speed: 40s;
+  --flex-min-width: 375px;
 }
 
 .button--highlight {
@@ -43,6 +44,14 @@
     display: none;
   }
 }
+
+body {
+  background-image: url(https://cdn.shopify.com/s/files/1/0710/6025/9064/files/Background_Light.png?v=1721972372) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Global Styles (end) */
 
 /* Overrides ( start ) */
@@ -52,6 +61,10 @@
 
 .section-custom-header .header--mobile-left {
   grid-template-columns: 2fr 1fr;
+}
+
+.section-custom-header .header-wrapper {
+  background-color: transparent;
 }
 
 .custom-header-cta-container {
@@ -82,7 +95,13 @@ button a {
 
 .text-video-container > div {
   flex: 1;
-  min-width: 375px;
+  min-width: var(--flex-min-width);
+}
+
+@media (max-width: 500px) {
+  .text-video-container > div {
+    min-width: 100%;
+  }
 }
 
 .section-text-video {
@@ -293,6 +312,7 @@ button a {
   justify-content: center;
   align-items: center;
   margin-top: 14px;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
@@ -304,4 +324,87 @@ button a {
   justify-content: center;
   align-items: center;
   gap: 6px;
+}
+
+/* Image with Features */
+
+.image-with-features--container {
+  padding: 0 20px;
+}
+
+.image-with-features--container h4,
+.image-with-features--container h2 {
+  text-align: center;
+}
+
+.image-with-features--container .rte-subheading {
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.image-with-features--container h2 {
+  margin: 0;
+}
+
+.image-with-features--content {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
+  margin: 48px 0;
+  flex-wrap: wrap;
+}
+
+.image-with-features--content > div {
+  min-width: var(--flex-min-width);
+  flex: 1;
+}
+
+.image-with-feature--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.image-with-features--feature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+  background-color: #ffffff0d;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.image-with-features--feature p {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+@media (max-width: 916px) {
+  .image-with-features--features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .image-with-features--feature {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-with-features--feature p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .image-with-features--content > div {
+    min-width: 100%;
+  }
 }

@@ -1,4 +1,45 @@
-<section></section>
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="section-{{ section.id }}-padding">
+  <div class="image-with-features--container page-width">
+    <h4 class="h4 rte-subheading">DISCOVER THE BENEFITS</h4>
+    <h2 class="h2">ONLY 5 MINS TO REDUCE STRESS</h2>
+    <div class="image-with-features--content">
+      <div class="image-with-feature--image">
+        <img src="https://cdn.shopify.com/s/files/1/0710/6025/9064/files/Mask_group_1.png?v=1721966694">
+      </div>
+      <div class="image-with-features--features">
+        {% for i in (1..4) %}
+          <div class="image-with-features--feature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="57" height="56" viewBox="0 0 57 56" fill="none">
+              <circle cx="28.7686" cy="28" r="27.5" fill="white" fill-opacity="0.05" stroke="url(#paint0_linear_1_1046)"/>
+              <path d="M22.5988 38.1339L24.161 31.0253L24.2229 30.7433L24.0096 30.5486L18.7429 25.7422L25.6781 25.1085L25.9827 25.0807L26.0966 24.7969L28.7686 18.142L31.4406 24.7969L31.5546 25.0807L31.8591 25.1085L38.7943 25.7422L33.5276 30.5486L33.3143 30.7433L33.3763 31.0253L34.9384 38.1339L29.0366 34.3864L28.7686 34.2162L28.5006 34.3864L22.5988 38.1339Z" stroke="white"/>
+              <defs>
+              <linearGradient id="paint0_linear_1_1046" x1="-18.6534" y1="68.9231" x2="63.5701" y2="64.5865" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#65D9FF"/>
+              <stop offset="1" stop-color="#0834CA"/>
+              </linearGradient>
+              </defs>
+            </svg>
+            <p>Lower Anxiety Levels</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
 
 {% schema %}
 {
