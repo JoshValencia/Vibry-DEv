@@ -22,7 +22,7 @@
           {%- case block.type -%}
             {%- when 'subheading' -%}
               <h4
-                class="rich-text__heading rte inline-richtext h4"
+                class="rich-text__heading rte inline-richtext h4 rte-subheading"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.subheading }}
@@ -76,7 +76,10 @@
                 {%- endif -%}
               </div>
             {%- when 'image' -%}
-              <img src="https://cdn.shopify.com/s/files/1/0710/6025/9064/files/Graphic.png?v=1721962495">
+              <img
+                class="rte-image"
+                src="https://cdn.shopify.com/s/files/1/0710/6025/9064/files/Graphic.png?v=1721962495"
+              >
           {%- endcase -%}
         {%- endfor -%}
       </div>

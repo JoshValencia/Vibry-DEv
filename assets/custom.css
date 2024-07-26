@@ -211,3 +211,32 @@ button a {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.section-logo-slider .carousel {
+  display: block;
+  width: 100%;
+}
+
+.section-logo-slider .carousel-cell img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+}
+
+.section-logo-slider .carousel-cell {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Custom Rich Text */
+
+.rte-subheading {
+  color: #fff;
+  opacity: 50%;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.rte-image {
+  width: 100%;
+}
