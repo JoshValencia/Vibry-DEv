@@ -25,6 +25,18 @@
 .button--full {
   width: 100%;
 }
+
+@media (min-width: 916px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media (max-width: 916px) {
+  .desktop-only {
+    display: none;
+  }
+}
 /* Global Styles (end) */
 
 /* Overrides ( start ) */
@@ -64,7 +76,7 @@ button a {
 
 .text-video-container > div {
   flex: 1;
-  min-width: 600px;
+  min-width: 375px;
 }
 
 .section-text-video {
@@ -178,4 +190,16 @@ button a {
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
+}
+
+@media (max-width: 916px) {
+  .text-video-textcontent {
+    text-align: center;
+  }
+  .text-video-highlights {
+    text-align: center;
+  }
+  .text-video-review {
+    justify-content: center;
+  }
 }
