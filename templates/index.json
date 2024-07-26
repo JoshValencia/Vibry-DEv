@@ -227,7 +227,42 @@
     },
     "image_with_features_taCiKw": {
       "type": "image-with-features",
+      "blocks": {
+        "features_UrYTYk": {
+          "type": "features",
+          "settings": {
+            "text": "Lower Anxiety Levels"
+          }
+        },
+        "features_mY6mxb": {
+          "type": "features",
+          "settings": {
+            "text": "Lower Anxiety Levels"
+          }
+        },
+        "features_Lbq4Gx": {
+          "type": "features",
+          "settings": {
+            "text": "Lower Anxiety Levels"
+          }
+        },
+        "features_VLVDF9": {
+          "type": "features",
+          "settings": {
+            "text": "Lower Anxiety Levels"
+          }
+        }
+      },
+      "block_order": [
+        "features_UrYTYk",
+        "features_mY6mxb",
+        "features_Lbq4Gx",
+        "features_VLVDF9"
+      ],
       "settings": {
+        "subheading": "DISCOVER THE BENEFITS",
+        "heading": "Only 5 Minutes To Reduce Stress",
+        "image": "shopify:\/\/shop_images\/Mask_group_1.png"
       }
     }
   },
