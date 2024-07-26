@@ -315,6 +315,7 @@ button a {
 
 .rte-image {
   width: 100%;
+  object-fit: contain;
 }
 
 @media (max-width: 500px) {
