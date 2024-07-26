@@ -2,6 +2,7 @@
 :root {
   --button-gradient: linear-gradient(86.98deg, #65d9ff -34.1%, #0834ca 105.76%);
   --fade-text-color: #ffffffb2;
+  --animation-speed: 40s;
 }
 
 .button--highlight {
@@ -202,4 +203,11 @@ button a {
   .text-video-review {
     justify-content: center;
   }
+}
+
+/* Logo Slider */
+
+.section-logo-slider .carousel-cell {
+  padding-left: 10px;
+  padding-right: 10px;
 }

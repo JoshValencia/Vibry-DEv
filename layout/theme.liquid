@@ -28,11 +28,13 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
+
     {{ content_for_header }}
 
     {%- liquid
@@ -218,6 +220,7 @@
         }
       }
     {% endstyle %}
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
