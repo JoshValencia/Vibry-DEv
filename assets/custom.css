@@ -2,6 +2,11 @@
 :root {
   --button-gradient: linear-gradient(86.98deg, #65d9ff -34.1%, #0834ca 105.76%);
   --fade-text-color: #ffffffb2;
+  --primary-highlight-color: linear-gradient(
+    84.58deg,
+    #65d9ff -33.68%,
+    #0834ca 302.75%
+  );
   --animation-speed: 40s;
 }
 
@@ -244,5 +249,59 @@ button a {
 /* Custom Multicolumn */
 
 .section-custom-multicolumn .title-wrapper-with-link {
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.section-custom-multicolumn slider-component {
+  margin: 45px 0;
+}
+
+.section-custom-multicolumn .multicolumn .button {
+  margin: 0;
+}
+
+.section-custom-multicolumn
+  .multicolumn-card.content-container
+  .multicolumn-card__info {
+  padding: 16px;
+}
+
+.section-custom-multicolumn .background-none .multicolumn-card__image-wrapper {
+  margin: 0;
+}
+
+.section-custom-multicolumn .multicolumn-card__info h3 {
+  background: var(--primary-highlight-color);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section-custom-multicolumn .multicolumn-card {
+  border: 1px solid #cfcfcf;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+}
+
+.section-custom-multicolumn .title-wrapper-with-link {
   justify-content: center;
+}
+
+.section-custom-multicolumn .multicolumn--footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 14px;
+  gap: 16px;
+}
+
+.section-custom-multicolumn .multicolumn--footer p {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
 }
