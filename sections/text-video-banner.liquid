@@ -1,26 +1,34 @@
 {% capture textvideobanner %}
     <div class="text-video-highlights">
-      {% for i in (1..4) %}
+      {% for block in section.blocks %}
         <p>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
             <path d="M6.54961 12.9996L0.849609 7.29961L2.27461 5.87461L6.54961 10.1496L15.7246 0.974609L17.1496 2.39961L6.54961 12.9996Z" fill="#65D9FF"/>
           </svg>
-          Reduce Anxiety
+          {{ block.settings.highlight-text }}
         </p>
       {% endfor %}
     </div>
     <button class="button button--primary button--gradient button--full button--highlight">
-      <span>SHOP VIBRY NOW</span>
+      <a href="{{ section.settings.button_link }}">
+      <span>{{ section.settings.button-text }}</span>
+      </a>
     </button>
     <div class="text-video-review">
       <div class="text-video-rating">
         {% for i in (1..5) %}
+          {% if i <= section.settings.rating %}
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
             <path d="M3.69008 14.8331L4.71924 10.384L1.26758 7.39147L5.82758 6.99564L7.60091 2.7998L9.37424 6.99564L13.9342 7.39147L10.4826 10.384L11.5117 14.8331L7.60091 12.474L3.69008 14.8331Z" fill="white"/>
           </svg>
+          {% else %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+            <path d="M3.69008 14.8331L4.71924 10.384L1.26758 7.39147L5.82758 6.99564L7.60091 2.7998L9.37424 6.99564L13.9342 7.39147L10.4826 10.384L11.5117 14.8331L7.60091 12.474L3.69008 14.8331Z" fill="#eee"/>
+          </svg>
+          {% endif %}
         {% endfor %}
       </div>
-      <p>Rated 4.8/5 by <strong>1000+ Customers</strong></p>
+      <p>{{ section.settings.rating-text }}</p>
     </div>
 
 {% endcapture %}
@@ -28,9 +36,9 @@
 <section>
   <div class="text-video-container page-width">
     <div class="text-video-textcontent">
-      <h3 class="heading h3">BREAK YOUR</h3>
-      <h1 class="heading h1">ADDICTIONS</h1>
-      <h4 class="heading h4">#1 AT-HOME NEUROMODULATION DEVICE</h4>
+      <h3 class="heading h3">{{ section.settings.subheading }}</h3>
+      <h1 class="heading h1">{{ section.settings.heading }}</h1>
+      <h4 class="heading h4">{{ section.settings['highlight-heading'] }}</h4>
       <div class="text-video-meta desktop-only">
         {{ textvideobanner }}
       </div>
@@ -53,10 +61,10 @@
       <video
         loop
       >
-        <source src="https://cdn.shopify.com/videos/c/o/v/481f7c536d0f4f8a90d857cc7c1b6230.mp4" type="video/mp4">
+        <source src="{{ section.settings.video.sources.first.url }}" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <img src="https://cdn.shopify.com/s/files/1/0710/6025/9064/files/Vibry_b1_-_trans.png?v=1721952646">
+      <img src="{{ section.settings.video-poster | img_url: 'master' }}">
     </div>
     <div class="text-video-meta mobile-only">
       {{ textvideobanner }}
@@ -68,7 +76,77 @@
 {
   "name": "Text Video Banner",
   "class": "section-text-video",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "BREAK YOUR"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "ADDICTIONS"
+    },
+    {
+      "type": "text",
+      "id": "highlight-heading",
+      "label": "Highlight Heading",
+      "default": "#1 AT-HOME NEUROMODULATION DEVICE"
+    },
+    {
+      "type": "text",
+      "id": "button-text",
+      "label": "Button Text",
+      "default": "SHOP VIBRY NOW"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "rating",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "label": "Rating",
+      "default": 5
+    },
+    {
+      "type": "inline_richtext",
+      "id": "rating-text",
+      "default": "Rated 4.8/5 by <b>1000+ Customers</b>",
+      "label": "Rating Text"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Featured Video"
+    },
+    {
+      "type": "image_picker",
+      "id": "video-poster",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "highlight",
+      "name": "Highlight",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "highlight-text",
+          "label": "Description",
+          "default": "Reduce Anxiety"
+        }
+      ]
+    }
+  ],
   "disabled_on": {
     "groups": ["footer", "header"]
   },
