@@ -22,6 +22,12 @@
     "custom_rich_text_UT8MRE": {
       "type": "custom-rich-text",
       "blocks": {
+        "subheading_8kaFQt": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CALM BODY, CLEAR MIND"
+          }
+        },
         "heading_AwTHtB": {
           "type": "heading",
           "settings": {
@@ -42,6 +48,7 @@
         }
       },
       "block_order": [
+        "subheading_8kaFQt",
         "heading_AwTHtB",
         "text_aBUcRR",
         "image_Tb7ycQ"
