@@ -19,7 +19,7 @@
     "gradient_accent_2": "",
     "colors_text": "#ffffff",
     "colors_outline_button_labels": "#64bdff",
-    "colors_background_1": "#0c101d",
+    "colors_background_1": "rgba(0,0,0,0)",
     "gradient_background_1": "",
     "colors_background_2": "#0c101d",
     "gradient_background_2": "",
