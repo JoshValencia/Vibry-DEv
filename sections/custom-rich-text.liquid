@@ -78,7 +78,10 @@
             {%- when 'image' -%}
               <img
                 class="rte-image"
-                src="https://cdn.shopify.com/s/files/1/0710/6025/9064/files/Graphic.png?v=1721962495"
+                src="{{ block.settings.image   | img_url: "master" }}"
+                alt="{{ block.settings.image.alt }}"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
               >
           {%- endcase -%}
         {%- endfor -%}
