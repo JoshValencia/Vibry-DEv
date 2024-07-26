@@ -14,14 +14,19 @@
 
 <section class="section-{{ section.id }}-padding">
   <div class="image-with-features--container page-width">
-    <h4 class="h4 rte-subheading">DISCOVER THE BENEFITS</h4>
-    <h2 class="h2">Only 5 Minutes To Reduce Stress</h2>
+    <h4 class="h4 rte-subheading">{{ section.settings.subheading }}</h4>
+    <h2 class="h2">{{ section.settings.heading }}</h2>
     <div class="image-with-features--content">
       <div class="image-with-feature--image">
-        <img src="https://cdn.shopify.com/s/files/1/0710/6025/9064/files/Mask_group_1.png?v=1721966694">
+        <img
+          src="{{section.settings.image | img_url: "master" }}"
+          alt="{{ section.settings.image.alt }}"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+        >
       </div>
       <div class="image-with-features--features">
-        {% for i in (1..4) %}
+        {% for block in section.blocks %}
           <div class="image-with-features--feature">
             <svg xmlns="http://www.w3.org/2000/svg" width="57" height="56" viewBox="0 0 57 56" fill="none">
               <circle cx="28.7686" cy="28" r="27.5" fill="white" fill-opacity="0.05" stroke="url(#paint0_linear_1_1046)"/>
@@ -33,7 +38,7 @@
               </linearGradient>
               </defs>
             </svg>
-            <p>Lower Anxiety Levels</p>
+            <p>{{ block.settings.text }}</p>
           </div>
         {% endfor %}
       </div>
@@ -45,7 +50,39 @@
 {
   "name": "Image with Features",
   "class": "section-image-with-features",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "DISCOVER THE BENEFITS"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Only 5 Minutes To Reduce Stress"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Featured Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "features",
+      "name": "Features",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Feature",
+          "default": "Lower Anxiety Levels"
+        }
+      ]
+    }
+  ],
   "disabled_on": {
     "groups": ["footer", "header"]
   },
