@@ -138,6 +138,10 @@ button a {
   font-weight: 600;
 }
 
+.text-video-meta button {
+  max-width: 500px;
+}
+
 .text-video-media {
   position: relative;
   display: flex;
