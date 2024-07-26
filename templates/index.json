@@ -57,6 +57,59 @@
     },
     "logo_slider_RFV4jL": {
       "type": "logo-slider",
+      "blocks": {
+        "logo_pLcAxX": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Healthline_logo_1.png"
+          }
+        },
+        "logo_J74BFc": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Healthline_logo_1.png"
+          }
+        },
+        "logo_VgYhDh": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Healthline_logo_1.png"
+          }
+        },
+        "logo_i3dEHP": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Healthline_logo_1.png"
+          }
+        },
+        "logo_PYze9q": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Healthline_logo_1.png"
+          }
+        },
+        "logo_awiT3c": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Healthline_logo_1.png"
+          }
+        },
+        "logo_JpBxYp": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Healthline_logo_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "logo_pLcAxX",
+        "logo_J74BFc",
+        "logo_VgYhDh",
+        "logo_i3dEHP",
+        "logo_PYze9q",
+        "logo_awiT3c",
+        "logo_JpBxYp"
+      ],
       "settings": {
       }
     },
