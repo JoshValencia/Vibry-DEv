@@ -3,11 +3,13 @@
     class="carousel"
     data-flickity='{"cellAlign":"center","freeScroll":true,"contain":true,"wrapAround":true,"autoPlay":3000,"pauseAutoPlayOnHover":false,"prevNextButtons":false,"pageDots":false, "groupCells": true}'
   >
-    {% for i in (1..10) %}
+    {% for block in section.blocks %}
       <div class="carousel-cell">
         <img
-          src="https://cdn.shopify.com/s/files/1/0710/6025/9064/files/Healthline_logo_1.png?v=1721959155"
-          alt=""
+          src="{{ block.settings.logo | img_url: "master" }}"
+          alt="{{ block.settings.logo.alt }}"
+          width="{{ block.settings.logo.width }}"
+          height="{{ block.settings.logo.height }}"
         >
       </div>
     {% endfor %}
@@ -19,6 +21,19 @@
   "name": "Logo Slider",
   "class": "section-logo-slider",
   "settings": [],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        }
+      ]
+    }
+  ],
   "disabled_on": {
     "groups": ["footer", "header"]
   },
