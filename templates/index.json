@@ -13,9 +13,15 @@
       "type": "text-video-banner",
       "settings": {
       }
+    },
+    "logo_slider_RFV4jL": {
+      "type": "logo-slider",
+      "settings": {
+      }
     }
   },
   "order": [
-    "text_video_banner_EJU49K"
+    "text_video_banner_EJU49K",
+    "logo_slider_RFV4jL"
   ]
 }
