@@ -11,7 +11,48 @@
   "sections": {
     "text_video_banner_EJU49K": {
       "type": "text-video-banner",
+      "blocks": {
+        "highlight_dzPpm4": {
+          "type": "highlight",
+          "settings": {
+            "highlight-text": "Reduce Anxiety"
+          }
+        },
+        "highlight_3KFPqM": {
+          "type": "highlight",
+          "settings": {
+            "highlight-text": "Reduce Anxiety"
+          }
+        },
+        "highlight_bVWX4Q": {
+          "type": "highlight",
+          "settings": {
+            "highlight-text": "Reduce Anxiety"
+          }
+        },
+        "highlight_4z6GQU": {
+          "type": "highlight",
+          "settings": {
+            "highlight-text": "Reduce Anxiety"
+          }
+        }
+      },
+      "block_order": [
+        "highlight_dzPpm4",
+        "highlight_3KFPqM",
+        "highlight_bVWX4Q",
+        "highlight_4z6GQU"
+      ],
       "settings": {
+        "subheading": "BREAK YOUR",
+        "heading": "ADDICTIONS",
+        "highlight-heading": "#1 AT-HOME NEUROMODULATION DEVICE",
+        "button-text": "SHOP VIBRY NOW",
+        "button_link": "",
+        "rating": 5,
+        "rating-text": "Rated 4.8\/5 by <strong>1000+ Customers<\/strong>",
+        "video": "shopify:\/\/files\/videos\/852435-hd_1920_1080_30fps.mp4",
+        "video-poster": "shopify:\/\/shop_images\/Vibry_b1_-_trans.png"
       }
     },
     "logo_slider_RFV4jL": {
