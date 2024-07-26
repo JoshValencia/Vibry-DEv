@@ -20,6 +20,13 @@
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
+            {%- when 'subheading' -%}
+              <h4
+                class="rich-text__heading rte inline-richtext h4"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.subheading }}
+              </h4>
             {%- when 'heading' -%}
               <h2
                 class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}"
@@ -187,6 +194,19 @@
     }
   ],
   "blocks": [
+    {
+      "type": "subheading",
+      "name": "Subheading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Heading",
+          "default": "Subheading"
+        }
+      ]
+    },
     {
       "type": "heading",
       "name": "t:sections.rich-text.blocks.heading.name",
