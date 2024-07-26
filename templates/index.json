@@ -129,12 +129,18 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_features_taCiKw": {
+      "type": "image-with-features",
+      "settings": {
+      }
     }
   },
   "order": [
     "text_video_banner_EJU49K",
     "logo_slider_RFV4jL",
     "custom_rich_text_UT8MRE",
-    "custom_multicolumn_ia6yQ8"
+    "custom_multicolumn_ia6yQ8",
+    "image_with_features_taCiKw"
   ]
 }
