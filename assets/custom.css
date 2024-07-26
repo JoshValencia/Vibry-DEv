@@ -434,8 +434,8 @@ button a {
 }
 
 @media (min-width: 750px) {
-  .slider-mobile-gutter progress {
-    display: none;
+  .section-custom-multicolumn .slider-mobile-gutter progress {
+    display: none !important;
   }
 }
 
