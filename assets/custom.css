@@ -1,7 +1,8 @@
 /* Global Styles (start)*/
-/* :root{
-
-} */
+:root {
+  --button-gradient: linear-gradient(86.98deg, #65d9ff -34.1%, #0834ca 105.76%);
+  --fade-text-color: #ffffffb2;
+}
 
 .button--highlight {
   font-weight: 700;
@@ -10,6 +11,19 @@
 .button--tight {
   padding: 0 1rem !important;
   min-width: 0 !important;
+}
+
+.button--gradient {
+  background: var(--button-gradient);
+  border: none !important;
+}
+
+.button--gradient::after {
+  box-shadow: none !important;
+}
+
+.button--full {
+  width: 100%;
 }
 /* Global Styles (end) */
 
@@ -38,9 +52,130 @@ button a {
 }
 /* Overrides ( end ) */
 
+/* Text Video Banner */
+
 .text-video-container {
   display: flex;
   flex-direction: row;
   justify-content: stretch;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.text-video-container > div {
+  flex: 1;
+  min-width: 600px;
+}
+
+.section-text-video {
+  padding: 5rem 0;
+}
+.text-video-container .heading {
+  margin: 0;
+}
+
+.text-video-textcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.text-video-textcontent .h3 {
+  font-size: 3.5rem;
+  line-height: 3.8125rem;
+  font-weight: 400;
+}
+
+.text-video-textcontent .h1 {
+  font-size: 5.5rem;
+  line-height: 6rem;
+  font-weight: 800;
+}
+
+.text-video-textcontent .h4 {
+  font-size: 1.6875rem;
+  color: var(--fade-text-color);
+  font-weight: 600;
+}
+
+.text-video-media {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  min-width: 400px;
+  min-height: 400px;
+}
+
+.text-video-media video {
+  width: 100%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.text-video-media img {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.text-video-media .text-video-custom-playbtn {
+  background: none;
+  color: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
+  cursor: pointer;
+  width: 78px;
+  height: 78px;
+}
+
+.text-video-media .text-video-custom-playbtn svg {
+  max-width: 100%;
+}
+
+.text-video-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 32px 0;
+}
+
+.text-video-highlights p {
+  margin: 0;
+}
+
+.text-video-review {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.text-video-review p {
+  margin: 0;
+}
+
+.text-video-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
 }
