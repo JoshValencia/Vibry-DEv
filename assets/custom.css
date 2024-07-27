@@ -351,32 +351,52 @@ button a {
 
 /* Logo Slider */
 
-.section-logo-slider .carousel-cell {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.section-logo-slider .carousel {
-  display: block;
-  width: 100%;
-}
-
-.section-logo-slider .carousel-cell img {
-  width: 100%;
-  max-width: 120px;
+.section-logo-slider .slide img {
   height: auto;
-  filter: opacity(0.2);
+  object-fit: contain;
+  filter: opacity(0.7);
 }
 
-.section-logo-slider .carousel-cell {
-  margin-left: 5%;
-  margin-right: 5%;
+.section-logo-slider .slide {
+  height: 25px;
+  animation: scroll 60s linear infinite;
 }
 
-.section-logo-slider
-  .carousel-cell.is-selected:not(:first-child):not(:last-child)
-  img {
-  filter: opacity(0.8);
+.slide-track {
+  width: 100%;
+  display: flex;
+  gap: 3em;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-track::before {
+  content: "";
+  background: linear-gradient(
+    to right,
+    rgba(13, 18, 38, 1) 0%,
+    rgba(13, 18, 38, 0) 10%,
+    rgba(13, 18, 38, 0) 90%,
+    rgba(13, 18, 38, 1) 100%
+  );
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block !important;
+  z-index: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      calc(-100px * 6)
+    ); /* Moves by half of .slide-track width */
+  }
 }
 
 /* Custom Rich Text */

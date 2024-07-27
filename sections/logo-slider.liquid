@@ -1,18 +1,17 @@
 <section>
-  <div
-    class="carousel"
-    data-flickity='{"cellAlign":"center","freeScroll":true,"contain":true,"wrapAround":true,"autoPlay":3000,"pauseAutoPlayOnHover":false,"prevNextButtons":false,"pageDots":false, "groupCells": true}'
-  >
-    {% for block in section.blocks %}
-      <div class="carousel-cell">
-        <img
-          src="{{ block.settings.logo | img_url: "master" }}"
-          alt="{{ block.settings.logo.alt }}"
-          width="{{ block.settings.logo.width }}"
-          height="{{ block.settings.logo.height }}"
-        >
-      </div>
-    {% endfor %}
+  <div class="slider">
+    <div class="slide-track">
+      {% for block in section.blocks %}
+        <div class="slide">
+          <img
+            src="{{ block.settings.logo | img_url: "master" }}"
+            alt="{{ block.settings.logo.alt }}"
+            width="{{ block.settings.logo.width }}"
+            height="{{ block.settings.logo.height }}"
+          >
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
