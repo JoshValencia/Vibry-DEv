@@ -76,13 +76,22 @@
                 {%- endif -%}
               </div>
             {%- when 'image' -%}
-              <img
-                class="rte-image"
-                src="{{ block.settings.image   | img_url: "master" }}"
-                alt="{{ block.settings.image.alt }}"
-                width="{{ block.settings.image.width }}"
-                height="{{ block.settings.image.height }}"
-              >
+              <picture>
+                <source
+                  media="(max-width: 500px)"
+                  srcset="{{ block.settings.mobile-image   | img_url: "master" }}"
+                  alt="{{ block.settings.mobile-image.alt }}"
+                  width="{{ block.settings.mobile-image.width }}"
+                  height="{{ block.settings.mobile-image.height }}"
+                >
+                <img
+                  class="rte-image"
+                  src="{{ block.settings.image   | img_url: "master" }}"
+                  alt="{{ block.settings.image.alt }}"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                >
+              </picture>
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -362,7 +371,12 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile-image",
+          "label": "Mobile Image"
         }
       ]
     }
