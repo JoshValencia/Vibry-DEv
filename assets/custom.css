@@ -1,6 +1,7 @@
 /* Global Styles (start)*/
 :root {
   --button-gradient: linear-gradient(86.98deg, #65d9ff -34.1%, #0834ca 105.76%);
+  --custom-btn-font: "Libre Franklin", sans-serif;
   --fade-text-color: #ffffffb2;
   --primary-highlight-color: linear-gradient(
     84.58deg,
@@ -59,6 +60,13 @@ body {
   body {
     background-image: url(https://cdn.shopify.com/s/files/1/0710/6025/9064/files/BG.png?v=1721974617) !important;
   }
+
+  p.announcement-bar__message {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.63px;
+    letter-spacing: 0.01em;
+  }
 }
 
 .section-custom-header .header {
@@ -82,12 +90,40 @@ body {
   gap: 10px;
 }
 
+.custom-header-cta-container button {
+  font-family: var(--custom-btn-font);
+}
+
 button a {
   text-decoration: none;
   color: inherit;
   font-weight: inherit;
   font-size: inherit;
   text-wrap: nowrap;
+}
+
+@media (max-width: 989px) {
+  .section-custom-header .header {
+    padding: 16px 20px;
+  }
+
+  .announcement-bar__link {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .section-custom-header .header__heading-link {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .custom-header-cta-container button.button--tight {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.54px;
+    letter-spacing: 0.01em !important;
+    padding: 10px 16px !important;
+    min-height: 0px;
+  }
 }
 /* Overrides ( end ) */
 
@@ -223,6 +259,29 @@ button a {
   flex-wrap: nowrap;
 }
 
+@media (max-width: 989px) {
+  .section-text-video {
+    padding-top: 32px;
+  }
+  .text-video-textcontent .h1 {
+    margin-bottom: 8px;
+  }
+
+  .text-video-meta button {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .text-video-review p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.07px;
+    letter-spacing: -0.01em;
+  }
+}
+
 @media (max-width: 916px) {
   .text-video-textcontent {
     text-align: center;
@@ -232,6 +291,10 @@ button a {
   }
   .text-video-review {
     justify-content: center;
+  }
+
+  .text-video-media img {
+    object-fit: cover;
   }
 }
 
@@ -255,7 +318,7 @@ button a {
   .text-video-textcontent .h4 {
     font-size: 15px;
     font-weight: 600;
-    line-height: 18px;
+    line-height: 18.29px;
   }
 
   .text-video-container::after {
@@ -271,6 +334,13 @@ button a {
 
   .text-video-highlights {
     margin-top: 0;
+    padding: 0 17px;
+  }
+
+  .text-video-highlights p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
   }
 
   .section-custom-multicolumn .multicolumn .button {
