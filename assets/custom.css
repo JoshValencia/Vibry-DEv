@@ -68,6 +68,10 @@ body {
     line-height: 14.63px;
     letter-spacing: 0.01em;
   }
+
+  .announcement-bar.gradient {
+    background: linear-gradient(86.98deg, #65d9ff -34.1%, #0834ca 105.76%);
+  }
 }
 
 .section-custom-header .header {
